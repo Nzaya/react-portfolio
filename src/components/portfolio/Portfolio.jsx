@@ -1,8 +1,8 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio2.jpg'
-import IMG3 from '../../assets/portfolio3.jpg'
+import IMG1 from '../../assets/dashboard.png'
+import IMG2 from '../../assets/flight.jpg'
+import IMG3 from '../../assets/movie.jpg'
 import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.png'
 import IMG6 from '../../assets/portfolio6.jpg'
@@ -13,50 +13,50 @@ const data = [
   {
     id: 1,
     img: IMG1,
-    title: 'Crypto Currency Dashboard & Financial Visualization',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com'
+    title: 'Storage Management',
+    github: 'https://github.com/Nzaya/Storage_management',
+    demo: 'https://storage-management-tawny.vercel.app/sign-up'
   },
 
   {
     id: 2,
     img: IMG2,
-    title: 'Chart Templates and Infographics in Figma',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com'
+    title: 'Flight Search',
+    github: 'https://github.com/Nzaya/Flight-search',
+    demo: 'https://flight-search-drab.vercel.app/'
   },
 
   {
     id: 3,
     img: IMG3,
-    title: 'Figma dashboard UI kit for data design web apps',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com'
+    title: 'Movie App',
+    github: 'https://github.com/Nzaya/movie_app_react',
+    demo: 'https://movie-app-react-wheat.vercel.app/'
   },
 
-  {
-    id: 4,
-    img: IMG4,
-    title: 'Maintaining tasks and tracking progress',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com'
-  },
+  // {
+  //   id: 4,
+  //   img: IMG4,
+  //   title: 'Time Chat App',
+  //   github: 'https://github.com/Nzaya/NodeJS-Chat',
+  //   demo: 'https://dribbble.com'
+  // },
 
-  {
-    id: 5,
-    img: IMG5,
-    title: 'Chart Templates and Infographics in Figma',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com'
-  },
+  // {
+  //   id: 5,
+  //   img: IMG5,
+  //   title: 'Chart Templates and Infographics in Figma',
+  //   github: 'https://github.com',
+  //   demo: 'https://dribbble.com'
+  // },
 
-  {
-    id: 6,
-    img: IMG6,
-    title: 'Chart Templates and Infographics in Figma',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com'
-  }
+  // {
+  //   id: 6,
+  //   img: IMG6,
+  //   title: 'Chart Templates and Infographics in Figma',
+  //   github: 'https://github.com',
+  //   demo: 'https://dribbble.com'
+  // }
   
 ]
 

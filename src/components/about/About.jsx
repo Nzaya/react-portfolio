@@ -1,13 +1,13 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me-1.jpg'
+import ME from '../../assets/me-1.png'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
 
 const About = () => {
   return (
-    <section id='about'>
+    <section id="about">
       <h5>Get to Know</h5>
       <h2>About Me</h2>
 
@@ -20,38 +20,43 @@ const About = () => {
 
         <div className="about__content">
           <div className="about__cards">
-            <article className='about__card'>
-              <FaAward className='about__icon'/>
+            <article className="about__card">
+              <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>4+ Years Working</small>
             </article>
 
-            <article className='about__card'>
-              <FiUsers className='about__icon'/>
+            <article className="about__card">
+              <FiUsers className="about__icon" />
               <h5>Clients</h5>
-              <small>200+ Worldwide</small>
+              <small>10+ Worldwide</small>
             </article>
 
-            <article className='about__card'>
-              <VscFolderLibrary className='about__icon'/>
+            <article className="about__card">
+              <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <small>20+ Completed</small>
             </article>
           </div>
 
           <p>
-            Strong in design and integration with intuitive problem-solving skills. Passionate about implementing and launching new projects.
-            Ability to translate business requirements into technical solutions.
+            Strong in design and integration with intuitive problem-solving
+            skills, I bring a deep understanding of crafting efficient and
+            scalable solutions.Driven by a passion for continuous improvement, I
+            actively stay updated with the latest industry trends and best
+            practices to ensure my work remains at the cutting edge of
+            technology.I possess a proven ability to translate complex business
+            requirements into robust and effective technical solutions, ensuring
+            seamless functionality and optimal performance.
           </p>
 
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
-
-
+          <a href="#contact" className="btn btn-primary">
+            Let's Talk
+          </a>
         </div>
-
       </div>
     </section>
-  )
+  );
 }
 
 export default About

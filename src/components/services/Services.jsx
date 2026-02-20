@@ -46,92 +46,78 @@ const Services = () => {
 
         <article className='service'>
           <div className="service__head">
-            <h3>Software Development</h3>
+            <h3>sofware Development</h3>
           </div>
 
           <ul className='service__list'>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Web Application Development.</p>
+              <p>Full-Stack Web Application Development</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Mobile Application Development.</p>
+              <p>Mobile Application Development</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>System Integration.</p>
+              <p>System Integration & API Engineering</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>DevOps Automation.</p>
+              <p>Cloud & DevOps Automation</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Custom Software Development.</p>
+              <p>Custom Enterprise Software Solutions</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Software Prototyping.</p>
+              <p>Software Prototyping & MVP Development</p>
             </li>
 
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Quality Assuarance.</p>
-            </li>
-
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>IT Consulting.</p>
-            </li>
-
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Enterprise Applications.</p>
-            </li>
           </ul>
         </article>
-        {/* ==============WEB DEVELOPMENT======================== */}
+        {/* ============== Cloud, Infrastructure ======================== */}
 
         <article className='service'>
           <div className="service__head">
-            <h3>Data Science</h3>
+            <h3>Cloud, Infrastructure & System Reliability</h3>
           </div>
 
           <ul className='service__list'>
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Business needs analysis.</p>
+              <p>Cloud Architecture & Deployment.</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Data Preparation.</p>
+              <p>CI/CD & Release Automation.</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Machine learning (ML) model design and development.</p>
+              <p>Containerization & Orchestration.</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>ML model evaluation and tuning.</p>
+              <p>Monitoring, Logging & Performance Optimization.</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Delivering data science output in an agreed format.</p>
+              <p>Security & Access Management.</p>
             </li>
 
             <li>
               <BiCheck className='service__list-icon'/>
-              <p>Data Visualization.</p>
+              <p>System Reliability & Maintenance.</p>
             </li>
           </ul>
         </article>
