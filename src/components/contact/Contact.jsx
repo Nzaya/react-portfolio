@@ -1,119 +1,121 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './contact.css';
+
 import { MdOutlineEmail } from 'react-icons/md';
 import { AiFillLinkedin } from 'react-icons/ai';
+
 import emailjs from 'emailjs-com';
 
-const Contact = () => {
+const Contact = ({ prefillMessage }) => {
+
   const form = useRef();
 
   const [message, setMessage] = useState('');
 
+  // Update message when Request CV is clicked
   useEffect(() => {
-    console.log('Contact component mounted');
-
-    const fromRequestCV = localStorage.getItem('fromRequestCV');
-    const savedMessage = localStorage.getItem('prefillMessage');
-
-    console.log('localStorage values:', {
-      fromRequestCV,
-      savedMessage
-    });
-
-    if (fromRequestCV === 'true' && savedMessage) {
-      console.log('Prefilling message');
-
-      setMessage(savedMessage);
-
-      localStorage.removeItem('fromRequestCV');
-      localStorage.removeItem('prefillMessage');
-
-      console.log('localStorage cleaned');
+    if (prefillMessage) {
+      console.log('Prefilling message...');
+      setMessage(prefillMessage);
     } else {
-      console.log('Not coming from Request CV');
-
       setMessage('');
     }
-  }, []);
-
-  useEffect(() => {
-    console.log('Message state:', message);
-  }, [message]);
+  }, [prefillMessage]);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log('Submitting message:', message);
+    console.log('Form submitted');
 
-    emailjs.sendForm(
-      'service_adw8gwt',
-      'template_skk5d97',
+    console.log('Form data:', {
+      name: form.current.name.value,
+      email: form.current.email.value,
+      message: form.current.message.value,
+    });
+
+    emailjs
+      .sendForm(
+      'service_2bsyz9v', //service_ID
+      'template_3jw0ydp', // template_ID
       form.current,
-      'l7COs_4e7SPY0W3ei'
-    );
+      'hJCQ6jSkN5Y2GEjsP' // public key
+    )
+      .then(
+        (result) => {
+          console.log('Email sent:', result.text);
 
-    e.target.reset();
-    setMessage('');
+          alert('Message sent successfully!');
+
+          e.target.reset();
+          setMessage('');
+        },
+        (error) => {
+          console.error('Email failed:', error.text);
+
+          alert('Failed to send message. Please try again.');
+        }
+      );
   };
 
   return (
-    <section id='contact'>
+    <section id="contact">
+
       <h5>Get in Touch</h5>
       <h2>Contact Me</h2>
 
-      <div className='container contact__container'>
+      <div className="container contact__container">
 
-        <div className='contact__options'>
+        {/* Contact Options */}
+        <div className="contact__options">
 
-          <article className='contact__option'>
-            <MdOutlineEmail className='contact__option-icon' />
+          <article className="contact__option">
+            <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>nzayangeta@outlook.com</h5>
           </article>
 
-          <article className='contact__option'>
-            <AiFillLinkedin className='contact__option-icon' />
+          <article className="contact__option">
+            <AiFillLinkedin className="contact__option-icon" />
             <h4>LinkedIn</h4>
             <h5>Sharon Nzaya</h5>
           </article>
 
         </div>
 
+        {/* Contact Form */}
         <form ref={form} onSubmit={sendEmail}>
 
           <input
-            type='text'
-            name='name'
-            placeholder='Your Full Name'
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
             required
           />
 
           <input
-            type='email'
-            name='email'
-            placeholder='Your Email'
+            type="email"
+            name="email"
+            placeholder="Your Email"
             required
           />
 
           <textarea
-            name='message'
-            rows='7'
-            placeholder='Your Message'
+            name="message"
+            rows="7"
+            placeholder="Your Message"
             required
             value={message}
-            onChange={(e) => {
-              console.log('Typing:', e.target.value);
-              setMessage(e.target.value);
-            }}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
 
-          <button type='submit' className='btn btn-primary'>
+          <button type="submit" className="btn btn-primary">
             Send Message
           </button>
 
         </form>
 
       </div>
+
     </section>
   );
 };

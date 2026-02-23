@@ -1,26 +1,26 @@
 import React from 'react';
 
-const CTA = () => {
+const CTA = ({ setPrefillMessage }) => {
 
   const handleRequestCV = () => {
-    console.log('Request CV button clicked');
+    console.log('Request CV clicked');
 
-    localStorage.setItem('fromRequestCV', 'true');
-
-    localStorage.setItem(
-      'prefillMessage',
+    setPrefillMessage(
       'Hello, I have reviewed your profile and I would like to request a copy of your CV. Thank you.'
     );
+  };
 
-    console.log('Saved in localStorage:', {
-      fromRequestCV: localStorage.getItem('fromRequestCV'),
-      prefillMessage: localStorage.getItem('prefillMessage')
-    });
+  const handleLetsTalk = () => {
+    console.log("Let's Talk clicked");
+
+    // Clear any previous message
+    setPrefillMessage('');
   };
 
   return (
-    <div className='cta'>
+    <div className="cta">
 
+      {/* Request CV Button */}
       <a
         href="#contact"
         className="btn"
@@ -29,7 +29,12 @@ const CTA = () => {
         Request CV
       </a>
 
-      <a href="#contact" className='btn btn-primary'>
+      {/* Let's Talk Button */}
+      <a
+        href="#contact"
+        className="btn btn-primary"
+        onClick={handleLetsTalk}
+      >
         Let's Talk
       </a>
 
